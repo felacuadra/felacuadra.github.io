@@ -211,6 +211,7 @@
       box-shadow: 0 8px 20px rgba(186, 77, 153, 0.25);
       width: 100%;
       max-width: 320px;
+      text-align: center;
     }
 
     .btn-primary:hover {
@@ -230,6 +231,7 @@
       transition: all 0.3s ease;
       width: 100%;
       max-width: 320px;
+      text-align: center;
     }
 
     .btn-secondary:hover {
@@ -409,6 +411,10 @@
       transition: background 0.3s ease;
     }
 
+    .btn-submit:hover {
+      background: var(--text-brown);
+    }
+
     /* Footer */
     footer {
       background: var(--text-brown);
@@ -548,14 +554,15 @@
     </div>
 
     <div class="form-box">
-      <form onsubmit="event.preventDefault(); alert('¡Gracias por inscribirte! Pronto te enviaremos los detalles a tu email.');">
+      <!-- Formspree Endpoint Integrado -->
+      <form action="https://formspree.io/f/mqppboeb" method="POST">
         <div class="form-group">
           <label for="name">Nombre Completo</label>
-          <input type="text" id="name" placeholder="Tu nombre" required>
+          <input type="text" id="name" name="name" placeholder="Tu nombre" required>
         </div>
         <div class="form-group">
           <label for="email">Correo Electrónico</label>
-          <input type="email" id="email" placeholder="tu@email.com" required>
+          <input type="email" id="email" name="email" placeholder="tu@email.com" required>
         </div>
         <button type="submit" class="btn-submit">Reservar mi Lugar Gratis</button>
       </form>
@@ -591,7 +598,6 @@
     const colors = ['#ffe4f7', '#ba4d99', '#b5b954', '#88adc8'];
     const stars = [];
 
-    // Dibujar estrella de 4 puntas
     function drawStarShape(cx, cy, spikes, outerRadius, innerRadius) {
       let rot = Math.PI / 2 * 3;
       let x = cx;
