@@ -10,118 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   
-  <!-- Estilos oficiales de MailerLite -->
-  <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1793197");</style>
-  <style type="text/css">
-    /* LOADER */
-    .ml-form-embedSubmitLoad {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-    }
-    .g-recaptcha {
-      transform: scale(1);
-      -webkit-transform: scale(1);
-      transform-origin: 0 0;
-      -webkit-transform-origin: 0 0;
-    }
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      border: 0;
-    }
-    .ml-form-embedSubmitLoad:after {
-      content: " ";
-      display: block;
-      width: 11px;
-      height: 11px;
-      margin: 1px;
-      border-radius: 50%;
-      border: 4px solid #fff;
-      border-color: #ffffff #ffffff #ffffff transparent;
-      animation: ml-form-embedSubmitLoad 1.2s linear infinite;
-    }
-    @keyframes ml-form-embedSubmitLoad {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    #mlb2-47739544.ml-form-embedContainer {
-      box-sizing: border-box;
-      display: table;
-      margin: 0 auto;
-      position: static;
-      width: 100% !important;
-    }
-    #mlb2-47739544.ml-form-embedContainer h4,
-    #mlb2-47739544.ml-form-embedContainer p,
-    #mlb2-47739544.ml-form-embedContainer span,
-    #mlb2-47739544.ml-form-embedContainer button {
-      text-transform: none !important;
-      letter-spacing: normal !important;
-    }
-    #mlb2-47739544.ml-form-embedContainer .ml-form-embedWrapper {
-      background-color: transparent;
-      border-width: 0px;
-      border-color: transparent;
-      border-radius: 4px;
-      box-sizing: border-box;
-      display: inline-block !important;
-      margin: 0;
-      padding: 0;
-      position: relative;
-      width: 100%;
-    }
-    #mlb2-47739544.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody {
-      padding: 0 !important;
-    }
-    #mlb2-47739544.ml-form-embedContainer .ml-block-form .ml-field-group {
-      text-align: left !important;
-      margin-bottom: 14px !important;
-    }
-    #mlb2-47739544.ml-form-embedContainer .ml-block-form .ml-field-group label {
-      margin-bottom: 6px;
-      color: #54301c;
-      font-size: 14px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-weight: 600;
-      display: inline-block;
-    }
-    #mlb2-47739544.ml-form-embedContainer .ml-form-embedBody .ml-form-fieldRow input {
-      background-color: #faf3e9 !important;
-      color: #54301c !important;
-      border-color: rgba(84, 48, 28, 0.12);
-      border-radius: 10px !important;
-      border-style: solid !important;
-      border-width: 1px !important;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 14px !important;
-      padding: 12px 16px !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-    }
-    #mlb2-47739544.ml-form-embedContainer .ml-form-embedBody .ml-form-embedSubmit button {
-      background-color: #ba4d99 !important;
-      border: none !important;
-      border-radius: 10px !important;
-      color: #ffffff !important;
-      cursor: pointer;
-      font-family: 'Plus Jakarta Sans', sans-serif !important;
-      font-size: 15px !important;
-      font-weight: 700 !important;
-      padding: 14px !important;
-      width: 100% !important;
-      transition: background 0.3s ease;
-    }
-    #mlb2-47739544.ml-form-embedContainer .ml-form-embedBody .ml-form-embedSubmit button:hover {
-      background-color: #54301c !important;
-    }
-  </style>
-
   <style>
     :root {
       --bg-cream: #faf3e9;
@@ -445,12 +333,17 @@
       position: relative;
       z-index: 20;
       box-shadow: var(--shadow-soft);
+      text-align: center;
     }
 
     @media (min-width: 850px) {
       .masterclass-banner {
         grid-template-columns: 1.2fr 1fr;
         padding: 60px 48px;
+        text-align: left;
+      }
+      .masterclass-banner .action-box {
+        text-align: center;
       }
     }
 
@@ -480,11 +373,36 @@
       opacity: 0.9;
     }
 
-    .form-box {
+    .action-box {
       background: var(--white);
-      padding: 24px;
+      padding: 36px 28px;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(84, 48, 28, 0.08);
+    }
+
+    .action-box p {
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      color: var(--text-brown);
+    }
+
+    .btn-cta-large {
+      display: inline-block;
+      background: var(--magenta);
+      color: var(--white);
+      padding: 16px 32px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(186, 77, 153, 0.25);
+      width: 100%;
+    }
+
+    .btn-cta-large:hover {
+      background: var(--text-brown);
+      transform: translateY(-2px);
     }
 
     /* Footer */
@@ -615,7 +533,7 @@
     </div>
   </section>
 
-  <!-- Banner Masterclass Gratuita con MailerLite Oficial -->
+  <!-- Banner Masterclass Gratuita con Link Directo de MailerLite -->
   <section class="masterclass-banner" id="masterclass">
     <div>
       <span class="mc-date">Próximamente — Noviembre 2026</span>
@@ -625,58 +543,13 @@
       </p>
     </div>
 
-    <!-- Formulario Oficial de MailerLite Integrado -->
-    <div class="form-box">
-      <div id="mlb2-47739544" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-47739544">
-        <div class="ml-form-align-center">
-          <div class="ml-form-embedWrapper embedForm">
-            <div class="ml-form-embedBody ml-form-embedBodyHorizontal">
-              <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1344406/forms/141018318285579998/subscribe" data-code="" method="post" target="_blank">
-                <div class="ml-form-formContent">
-                  <div class="ml-form-fieldRow">
-                    <div class="ml-field-group ml-field-name">
-                      <label>Nombre Completo</label>
-                      <input type="text" class="form-control" name="fields[name]" placeholder="Tu nombre" required>
-                    </div>
-                  </div>
-                  <div class="ml-form-fieldRow ml-last-item">
-                    <div class="ml-field-group ml-field-email">
-                      <label>Correo Electrónico</label>
-                      <input type="email" class="form-control" name="fields[email]" placeholder="tu@email.com" required>
-                    </div>
-                  </div>
-                </div>
-                <input type="hidden" name="ml-submit" value="1">
-                <div class="ml-form-embedSubmit">
-                  <button type="submit" class="primary">Reservar mi Lugar Gratis</button>
-                  <button disabled="disabled" style="display: none;" type="button" class="loading">
-                    <div class="ml-form-embedSubmitLoad"></div>
-                  </button>
-                </div>
-                <input type="hidden" name="anticsrf" value="true">
-              </form>
-            </div>
-            <div class="ml-form-successBody" style="display: none">
-              <div class="ml-form-successContent">
-                <h4 class="serif">¡Ya tenés tu lugar reservado! ✦</h4>
-                <p>Pronto te enviaremos todos los detalles a tu correo electrónico.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="action-box">
+      <p>Hacé clic en el botón para asegurar tu lugar de forma inmediata y recibir el acceso en tu correo.</p>
+      <a href="https://preview.mailerlite.io/forms/2744329/202598980680418748/share" target="_blank" class="btn-cta-large">
+        Reservar mi Lugar Gratis ✦
+      </a>
     </div>
   </section>
-
-  <!-- Script oficial de MailerLite requerido para procesar la suscripción -->
-  <script>
-    function ml_webform_success_47739544() {
-      var $ = ml_jQuery || jQuery;
-      $('.ml-subscribe-form-47739544 .ml-block-form').hide();
-      $('.ml-subscribe-form-47739544 .ml-form-successBody').show();
-    }
-  </script>
-  <script src="https://assets.mlcdn.com/ml/js/index.js" defer></script>
 
   <!-- Footer -->
   <footer>
