@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fe Lacuadra — Creativa Multipotencial</title>
   
-  <!-- Tipografía Instrumental Serif & Inter / Helvetica -->
+  <!-- Tipografía Instrumental Serif & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
       line-height: 1.6;
     }
 
-    /* Canvas de Estrellitas Flotantes */
+    /* Canvas de Estrellitas Cayendo */
     #starsCanvas {
       position: fixed;
       top: 0;
@@ -48,7 +48,6 @@
       z-index: 10;
     }
 
-    /* Typography Utilities */
     .serif {
       font-family: 'Instrument Serif', Georgia, serif;
       font-weight: 400;
@@ -236,7 +235,7 @@
       transform: translateY(-3px);
     }
 
-    /* Grid de Facetas estilo Andy Badillo */
+    /* Grid de Facetas */
     .section-grid {
       max-width: 1200px;
       margin: 60px auto 100px auto;
@@ -317,7 +316,7 @@
       text-decoration: underline;
     }
 
-    /* Módulo Masterclass Destacada */
+    /* Banner Masterclass */
     .masterclass-banner {
       max-width: 1140px;
       margin: 0 auto 100px auto;
@@ -422,7 +421,7 @@
       background: var(--text-brown);
     }
 
-    /* Footer & Contacto */
+    /* Footer */
     footer {
       background: var(--text-brown);
       color: var(--bg-cream);
@@ -466,10 +465,10 @@
 </head>
 <body>
 
-  <!-- Canvas de Estrellitas -->
+  <!-- Canvas de Estrellitas Cayendo -->
   <canvas id="starsCanvas"></canvas>
 
-  <!-- Ticker Infinito arriba estilo Andrea Badillo -->
+  <!-- Ticker Infinito arriba -->
   <div class="ticker-wrap">
     <div class="ticker-move">
       <div class="ticker-item">Creativa Multipotencial <span>✦</span></div>
@@ -507,7 +506,7 @@
     </div>
   </header>
 
-  <!-- Grid de Facetas estilo Andy Badillo -->
+  <!-- Grid de Facetas -->
   <section class="section-grid" id="facetas">
     <div class="section-header">
       <h2 class="serif">Mis Facetas Creative Hub</h2>
@@ -527,11 +526,11 @@
       <!-- Card 2 -->
       <div class="card">
         <div>
-          <span class="card-tag">Diseño & Estrategia</span>
-          <h3 class="card-title serif">Diseñadora Gráfica & Creadora de Contenido</h3>
-          <p class="card-desc">Colaboro con marcas aportando visión estética, dirección creativa y proyectos con identidad propia.</p>
+          <span class="card-tag">Creación & Marcas</span>
+          <h3 class="card-title serif">Creadora de Contenido</h3>
+          <p class="card-desc">Colaboro con marcas aportando visión estética, dirección creativa y narrativa visual con identidad propia.</p>
         </div>
-        <a href="https://instagram.com/fe.lacuadra" target="_blank" class="card-link">Ver Proyectos &rarr;</a>
+        <a href="https://instagram.com/fe.lacuadra" target="_blank" class="card-link">Ver en Instagram &rarr;</a>
       </div>
 
       <!-- Card 3 -->
@@ -541,17 +540,17 @@
           <h3 class="card-title serif">Fundadora & Diseñadora Floral</h3>
           <p class="card-desc">En mi Atelier Floral creo experiencias botánicas, arreglos y objetos curados que conectan con la belleza natural.</p>
         </div>
-        <a href="mailto:hola@felacuadra.com?subject=Consulta Atelier Floral" class="card-link">Consultar Atelier &rarr;</a>
+        <a href="https://wa.me/59891928528?text=Hola%20Fe!%20Quisiera%20consultarte%20por%20el%20Atelier%20Floral" target="_blank" class="card-link">Escribirme a WhatsApp &rarr;</a>
       </div>
 
       <!-- Card 4 -->
       <div class="card">
         <div>
           <span class="card-tag">Acompañamiento</span>
-          <h3 class="card-title serif">Coach & Mentora Estratégica</h3>
-          <p class="card-desc">Guiando a emprendedoras y creativas a salir del bucle del contenido constante para construir marcas con sentido.</p>
+          <h3 class="card-title serif">Mentora Estratégica</h3>
+          <p class="card-desc">Acompaño a emprendedoras y creativas a salir del bucle del contenido constante para construir marcas con sentido.</p>
         </div>
-        <a href="#masterclass" class="card-link">Conocer Experiencias &rarr;</a>
+        <a href="#masterclass" class="card-link">Conocer la Masterclass &rarr;</a>
       </div>
     </div>
   </section>
@@ -584,18 +583,17 @@
   <!-- Footer -->
   <footer>
     <h2 class="footer-title serif">Seguimos en contacto</h2>
-    <p>Montevideo / Colonia, Uruguay & Beyond</p>
+    <p>Colonia del Sacramento, Uruguay</p>
     
     <div class="footer-links">
       <a href="mailto:hola@felacuadra.com">hola@felacuadra.com</a>
       <a href="https://instagram.com/fe.lacuadra" target="_blank">@fe.lacuadra</a>
-      <a href="http://www.lacolonia.com.uy/" target="_blank">La Colonia</a>
     </div>
 
     <p class="footer-copy">&copy; 2026 Fe Lacuadra. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Script de Estrellitas -->
+  <!-- Script Lluvia de Estrellitas -->
   <script>
     const canvas = document.getElementById('starsCanvas');
     const ctx = canvas.getContext('2d');
@@ -611,13 +609,13 @@
     const colors = ['#ffe4f7', '#ba4d99', '#b5b954', '#88adc8'];
     const stars = [];
 
-    for (let i = 0; i < 45; i++) {
+    for (let i = 0; i < 50; i++) {
       stars.push({
         x: Math.random() * width,
         y: Math.random() * height,
         size: Math.random() * 2.5 + 1,
         color: colors[Math.floor(Math.random() * colors.length)],
-        speedY: Math.random() * 0.4 + 0.1,
+        speedY: Math.random() * 0.5 + 0.2,
         alpha: Math.random() * 0.8 + 0.2,
         pulsing: Math.random() * 0.02
       });
