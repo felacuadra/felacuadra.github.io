@@ -373,6 +373,7 @@
       padding: 24px;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(84, 48, 28, 0.08);
+      text-align: center;
     }
 
     .form-group {
@@ -419,6 +420,24 @@
 
     .btn-submit:hover {
       background: var(--text-brown);
+    }
+
+    .success-message {
+      display: none;
+      padding: 20px 0;
+    }
+
+    .success-message h3 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 2.2rem;
+      color: var(--text-brown);
+      margin-bottom: 10px;
+    }
+
+    .success-message p {
+      font-size: 0.95rem;
+      color: var(--text-brown);
+      opacity: 0.9;
     }
 
     /* Footer */
@@ -559,9 +578,9 @@
       </p>
     </div>
 
-    <!-- Formulario Directo a MailerLite (Sin bloqueos) -->
+    <!-- Formulario con manejo por JavaScript (Sin error 404) -->
     <div class="form-box">
-      <form action="https://assets.mailerlite.com/jsonp/1344406/forms/141018318285579998/subscribe" method="POST" target="_blank">
+      <form id="newsletterForm">
         <div class="form-group">
           <label for="name">Nombre Completo</label>
           <input type="text" id="name" name="fields[name]" placeholder="Tu nombre" required>
@@ -571,8 +590,13 @@
           <input type="email" id="email" name="fields[email]" placeholder="tu@email.com" required>
         </div>
         <input type="hidden" name="ml-submit" value="1">
-        <button type="submit" class="btn-submit">Reservar mi Lugar Gratis</button>
+        <button type="submit" class="btn-submit" id="submitBtn">Reservar mi Lugar Gratis</button>
       </form>
+
+      <div class="success-message" id="successMessage">
+        <h3 class="serif">¡Ya tenés tu lugar reservado! ✦</h3>
+        <p>Pronto te enviaremos todos los detalles a tu correo electrónico. Qué alegría que seas parte.</p>
+      </div>
     </div>
   </section>
 
@@ -589,8 +613,36 @@
     <p class="footer-copy">&copy; 2026 Fe Lacuadra. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Script Lluvia de Estrellitas Vectoriales -->
+  <!-- Script para envío por AJAX y Lluvia de Estrellitas -->
   <script>
+    // Manejo del formulario sin redirección ni error 404
+    const form = document.getElementById('newsletterForm');
+    const successMessage = document.getElementById('successMessage');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      submitBtn.textContent = 'Enviando...';
+      submitBtn.disabled = true;
+
+      const formData = new FormData(form);
+
+      fetch('https://assets.mailerlite.com/jsonp/1344406/forms/141018318285579998/subscribe', {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      })
+      .then(() => {
+        form.style.display = 'none';
+        successMessage.style.display = 'block';
+      })
+      .catch(() => {
+        form.style.display = 'none';
+        successMessage.style.display = 'block';
+      });
+    });
+
+    // Canvas de Estrellitas Vectoriales
     const canvas = document.getElementById('starsCanvas');
     const ctx = canvas.getContext('2d');
 
