@@ -318,7 +318,7 @@
       margin-top: auto;
     }
 
-    /* Banner Masterclass con MailerLite Integrado y Re-estilizado */
+    /* Banner Masterclass */
     .masterclass-banner {
       max-width: 1140px;
       margin: 0 auto 80px auto;
@@ -368,7 +368,6 @@
       opacity: 0.9;
     }
 
-    /* Estilos personalizados para el formulario de MailerLite */
     .form-box {
       background: var(--white);
       padding: 24px;
@@ -376,63 +375,50 @@
       box-shadow: 0 10px 30px rgba(84, 48, 28, 0.08);
     }
 
-    #mlb2-47739544.ml-form-embedContainer .ml-form-embedWrapper {
-      background-color: transparent !important;
-      border: none !important;
-      width: 100% !important;
-      max-width: 100% !important;
+    .form-group {
+      margin-bottom: 14px;
+      text-align: left;
     }
 
-    #mlb2-47739544.ml-form-embedContainer .ml-form-embedBody {
-      padding: 0 !important;
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-brown);
     }
 
-    #mlb2-47739544 .ml-form-fieldRow {
-      margin-bottom: 14px !important;
+    .form-group input {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--border-light);
+      background: var(--bg-cream);
+      font-family: inherit;
+      font-size: 0.9rem;
+      color: var(--text-brown);
+      outline: none;
     }
 
-    #mlb2-47739544 .ml-form-fieldRow label {
-      display: block !important;
-      font-size: 0.8rem !important;
-      font-weight: 600 !important;
-      margin-bottom: 6px !important;
-      color: var(--text-brown) !important;
-      font-family: 'Plus Jakarta Sans', sans-serif !important;
+    .form-group input:focus {
+      border-color: var(--magenta);
     }
 
-    #mlb2-47739544 .ml-form-fieldRow input {
-      width: 100% !important;
-      padding: 12px 16px !important;
-      border-radius: 10px !important;
-      border: 1px solid var(--border-light) !important;
-      background: var(--bg-cream) !important;
-      font-family: 'Plus Jakarta Sans', sans-serif !important;
-      font-size: 0.9rem !important;
-      color: var(--text-brown) !important;
-      outline: none !important;
-      box-shadow: none !important;
+    .btn-submit {
+      width: 100%;
+      background: var(--magenta);
+      color: var(--white);
+      border: none;
+      padding: 14px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
     }
 
-    #mlb2-47739544 .ml-form-fieldRow input:focus {
-      border-color: var(--magenta) !important;
-    }
-
-    #mlb2-47739544 .ml-form-embedSubmit button {
-      width: 100% !important;
-      background-color: var(--magenta) !important;
-      color: var(--white) !important;
-      border: none !important;
-      padding: 14px !important;
-      border-radius: 10px !important;
-      font-weight: 700 !important;
-      font-size: 0.95rem !important;
-      cursor: pointer !important;
-      font-family: 'Plus Jakarta Sans', sans-serif !important;
-      transition: background 0.3s ease !important;
-    }
-
-    #mlb2-47739544 .ml-form-embedSubmit button:hover {
-      background-color: var(--text-brown) !important;
+    .btn-submit:hover {
+      background: var(--text-brown);
     }
 
     /* Footer */
@@ -573,58 +559,22 @@
       </p>
     </div>
 
-    <!-- Formulario MailerLite integrado y estilizado con la misma estética de la web -->
+    <!-- Formulario Directo a MailerLite (Sin bloqueos) -->
     <div class="form-box">
-      <div id="mlb2-47739544" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-47739544">
-        <div class="ml-form-align-center">
-          <div class="ml-form-embedWrapper embedForm">
-            <div class="ml-form-embedBody ml-form-embedBodyHorizontal">
-              <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1344406/forms/141018318285579998/subscribe" method="post" target="_blank">
-                <div class="ml-form-formContent">
-                  <div class="ml-form-fieldRow">
-                    <div class="ml-field-group ml-field-name">
-                      <label for="name">Nombre Completo</label>
-                      <input type="text" class="form-control" name="fields[name]" placeholder="Tu nombre" required>
-                    </div>
-                  </div>
-                  <div class="ml-form-fieldRow ml-last-item">
-                    <div class="ml-field-group ml-field-email">
-                      <label for="email">Correo Electrónico</label>
-                      <input type="email" class="form-control" name="fields[email]" placeholder="tu@email.com" required>
-                    </div>
-                  </div>
-                </div>
-                <input type="hidden" name="ml-submit" value="1">
-                <div class="ml-form-embedSubmit">
-                  <button type="submit" class="primary">Reservar mi Lugar Gratis</button>
-                  <button disabled="disabled" style="display: none;" type="button" class="loading">
-                    <div class="ml-form-embedSubmitLoad"></div>
-                  </button>
-                </div>
-                <input type="hidden" name="anticsrf" value="true">
-              </form>
-            </div>
-            <div class="ml-form-successBody" style="display: none">
-              <div class="ml-form-successContent">
-                <h4>¡Gracias por inscribirte!</h4>
-                <p>Pronto te enviaremos los detalles a tu email.</p>
-              </div>
-            </div>
-          </div>
+      <form action="https://assets.mailerlite.com/jsonp/1344406/forms/141018318285579998/subscribe" method="POST" target="_blank">
+        <div class="form-group">
+          <label for="name">Nombre Completo</label>
+          <input type="text" id="name" name="fields[name]" placeholder="Tu nombre" required>
         </div>
-      </div>
+        <div class="form-group">
+          <label for="email">Correo Electrónico</label>
+          <input type="email" id="email" name="fields[email]" placeholder="tu@email.com" required>
+        </div>
+        <input type="hidden" name="ml-submit" value="1">
+        <button type="submit" class="btn-submit">Reservar mi Lugar Gratis</button>
+      </form>
     </div>
   </section>
-
-  <!-- Script oficial de MailerLite requerido para que funcione el envío -->
-  <script>
-    function ml_webform_success_47739544() {
-      var $ = ml_jQuery || jQuery;
-      $('.ml-subscribe-form-47739544 .ml-block-form').hide();
-      $('.ml-subscribe-form-47739544 .ml-form-successBody').show();
-    }
-  </script>
-  <script src="https://assets.mlcdn.com/ml/js/index.js" defer></script>
 
   <!-- Footer -->
   <footer>
@@ -690,8 +640,6 @@
         alpha: Math.random() * 0.8 + 0.2
       });
     }
-
-    defaultWidth = width;
 
     function animateStars() {
       ctx.clearRect(0, 0, width, height);
