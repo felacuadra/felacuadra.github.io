@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fe Lacuadra — Creativa Multipotencial</title>
+  <title>Fe Lacuadra — Creativa Multipotencial & Diseñadora de Marcas de Autor</title>
   
-  <!-- Tipografía Instrumental Serif & Plus Jakarta Sans -->
+  <!-- Tipografía Instrumental Serif & Plus Jakarta Sans / Helvética -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -46,6 +46,7 @@
       height: 100vh;
       pointer-events: none;
       z-index: 10;
+      opacity: 0.6;
     }
 
     .serif {
@@ -318,17 +319,17 @@
       margin-top: auto;
     }
 
-    /* Banner Masterclass */
+    /* Banner Elegante para Derivar a la Masterclass */
     .masterclass-banner {
       max-width: 1140px;
       margin: 0 auto 80px auto;
       background: linear-gradient(135deg, var(--pink-soft) 0%, #f7e6f3 100%);
       border-radius: 24px;
-      padding: 40px 20px;
+      padding: 40px 24px;
       border: 1px solid rgba(186, 77, 153, 0.2);
       display: grid;
       grid-template-columns: 1fr;
-      gap: 32px;
+      gap: 28px;
       align-items: center;
       position: relative;
       z-index: 20;
@@ -339,7 +340,7 @@
     @media (min-width: 850px) {
       .masterclass-banner {
         grid-template-columns: 1.2fr 1fr;
-        padding: 60px 48px;
+        padding: 50px 48px;
         text-align: left;
       }
       .masterclass-banner .action-box {
@@ -361,7 +362,7 @@
     }
 
     .mc-title {
-      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
       line-height: 1.15;
       color: var(--text-brown);
       margin-bottom: 14px;
@@ -375,15 +376,9 @@
 
     .action-box {
       background: var(--white);
-      padding: 36px 28px;
+      padding: 32px 28px;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(84, 48, 28, 0.08);
-    }
-
-    .action-box p {
-      font-size: 0.95rem;
-      margin-bottom: 20px;
-      color: var(--text-brown);
     }
 
     .btn-cta-large {
@@ -456,11 +451,11 @@
       <div class="ticker-item">Argentina viviendo en Uruguay <span>✦</span></div>
       <div class="ticker-item">+10 Años Emprendiendo <span>✦</span></div>
       <div class="ticker-item">Atelier Floral <span>✦</span></div>
-      <div class="ticker-item">Masterclass Gratuita Noviembre <span>✦</span></div>
+      <div class="ticker-item">Masterclass Lunes 16 Noviembre <span>✦</span></div>
     </div>
   </div>
 
-  <!-- Navegación Principales -->
+  <!-- Navegación Principal -->
   <nav>
     <a href="#" class="brand-logo">Fe Lacuadra</a>
     <div class="nav-links">
@@ -469,17 +464,17 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero Section Principal -->
   <header class="hero">
-    <span class="hero-badge">Bienvenida a mi espacio creativo</span>
+    <span class="hero-badge">Ecosistema Creativo & Marcas de Autor</span>
     <h1 class="hero-title serif">
       Hola, soy <em>Fe Lacuadra</em>
     </h1>
     <p class="hero-subtitle">
-      Creativa multipotencial, argentina viviendo en Uruguay y emprendedora desde hace más de 10 años. Ayudo a darle vida a las ideas.
+      Creativa multipotencial, comunicadora y mentora. Acompaño a mujeres y proyectos a ordenar sus múltiples pasiones para construir Marcas de Autor con presencia, concepto y una atmósfera propia.
     </p>
     <div class="hero-actions">
-      <a href="#masterclass" class="btn-primary">Sumarte a la Masterclass Free</a>
+      <a href="https://masterclass.felacuadra.com" target="_blank" class="btn-primary">Masterclass Gratuita</a>
       <a href="mailto:hola@felacuadra.com" class="btn-secondary">Escribirme un Mail</a>
     </div>
   </header>
@@ -526,27 +521,26 @@
         <div>
           <span class="card-tag">Acompañamiento</span>
           <h3 class="card-title serif">Mentora Estratégica</h3>
-          <p class="card-desc">Acompaño a emprendedoras y creativas a salir del bucle del contenido constante para construir marcas con sentido.</p>
+          <p class="card-desc">Acompaño a emprendedoras y creativas a salir del bucle del contenido constante para consolidar su propia Marca de Autor.</p>
         </div>
-        <a href="#masterclass" class="card-link">Conocer la Masterclass &rarr;</a>
+        <a href="https://masterclass.felacuadra.com" target="_blank" class="card-link">Sumarte a la Masterclass &rarr;</a>
       </div>
     </div>
   </section>
 
-  <!-- Banner Masterclass Gratuita con Link Directo de MailerLite -->
+  <!-- Banner Accesible y Derivador a la Masterclass -->
   <section class="masterclass-banner" id="masterclass">
     <div>
-      <span class="mc-date">Próximamente — Noviembre 2026</span>
-      <h2 class="mc-title serif">Masterclass Gratuita: De Crear Contenido a Crear Marca</h2>
+      <span class="mc-date">Próximo Encuentro — Lunes 16 Noviembre (18:00 hs UY)</span>
+      <h2 class="mc-title serif">Masterclass: De Crear Contenido a Generar Marca</h2>
       <p class="mc-desc">
-        Una clase libre y en vivo pensada para creativas y emprendedoras que quieren dejar de depender de la rueda inagotable del contenido y empezar a estructurar una marca con alma y magnetismo.
+        Un espacio en vivo pensado para creativas de múltiples intereses que están listas para dejar de publicar por publicar y empezar a plasmar una Marca de Autor sólida.
       </p>
     </div>
 
     <div class="action-box">
-      <p>Hacé clic en el botón para asegurar tu lugar de forma inmediata y recibir el acceso en tu correo.</p>
-      <a href="https://preview.mailerlite.io/forms/2744329/202598980680418748/share" target="_blank" class="btn-cta-large">
-        Reservar mi Lugar Gratis ✦
+      <a href="https://masterclass.felacuadra.com" target="_blank" class="btn-cta-large">
+        Ir a la web de la Masterclass &rarr;
       </a>
     </div>
   </section>
